@@ -6,8 +6,14 @@ export const Search = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  input {
+    width: 200px;
+    height: 20px;
+    border-radius: 4px;
+    border: none;
+  }
   img {
     cursor: pointer;
-    margin: 0 5px;
+    padding: 5px;
   }
 `;

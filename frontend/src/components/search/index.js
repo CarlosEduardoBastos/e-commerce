@@ -4,7 +4,7 @@ import loupe from "../../img/loupe.png";
 import { AppContext } from "../../context/ProdutosContext";
 const SearchComponents = () => {
   const { busca, setBusca } = React.useContext(AppContext);
-  const [ativar, setAtivar] = React.useState(false);
+  const [ativar, setAtivar] = React.useState(true);
 
   function handleChange({ target }) {
     setBusca(target.value);
@@ -14,7 +14,15 @@ const SearchComponents = () => {
   }
   return (
     <Search>
-      {ativar && <input type="text" value={busca} onChange={handleChange} />}
+      {ativar && (
+        <input
+          type="text"
+          value={busca}
+          onChange={handleChange}
+          placeholder="Pesquisar"
+        />
+      )}
+
       <img src={loupe} onClick={handleClick} />
     </Search>
   );

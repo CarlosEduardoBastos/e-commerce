@@ -12,7 +12,11 @@ export const Header = styled.header`
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
+    .cartImg {
+      display: flex;
+    }
     .logo a {
       font-size: 1.5rem;
     }

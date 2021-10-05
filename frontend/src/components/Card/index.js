@@ -4,9 +4,8 @@ import { AppContext } from "../../context/ProdutosContext";
 import { Card } from "./styled";
 
 const CardComponent = () => {
-  const { cart, setCart, dadosFiltrados } = React.useContext(AppContext);
-  console.log(dadosFiltrados);
-
+  const { cart, setCart, dadosFiltrados, setQuantidade, quantidade } =
+    React.useContext(AppContext);
   return (
     <Card>
       <div>
@@ -16,7 +15,16 @@ const CardComponent = () => {
               <img src={"../" + dado.image} alt="" />
             </div>
             <h2>{dado.name}</h2>
-            <button onClick={() => setCart([...cart, dado])}>AddCart</button>
+            <small>score: {dado.score}</small>
+            <span>R$ {dado.price}</span>
+            <button
+              onClick={() => {
+                setCart([...cart, dado]);
+                setQuantidade(quantidade + 1);
+              }}
+            >
+              Comprar
+            </button>
           </li>
         ))}
       </div>

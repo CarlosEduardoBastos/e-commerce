@@ -13,7 +13,7 @@ export const Card = styled.section`
     li {
       list-style: none;
       width: 330px;
-      height: 330px;
+      height: 350px;
       border: 1px solid #000;
       margin: 5px;
       display: flex;
@@ -22,10 +22,16 @@ export const Card = styled.section`
 
       h2 {
         font-size: 1rem;
-        padding: 20px 0;
+        padding: 10px 0;
       }
       .img-card {
         width: 200px;
+      }
+      .img-card img {
+        text-align: center;
+      }
+      span {
+        padding-bottom: 5px;
       }
       button {
         padding: 5px 20px;
